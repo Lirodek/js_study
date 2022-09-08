@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var max=0;
+        var min=100;
+        for(const element of [52,273,103,32,57,103,31,2]){
+            max = element > max ? element : max;
+            min = element < min ? element : min;
+        }
+        alert(max+", "+min);
+    </script>
+    
+</body>
+</html>

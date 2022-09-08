@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var student = {};
+
+        student.name = '배광민';
+        student.hobby = '게임';
+        student.specialty = '프로그래밍';
+        student.plan_for_theFuture = '프로그래머';
+
+        student.toString= function(){
+            var output='';
+            for(var key in this){
+                if(key != 'toString'){
+                    output += key +'\t'+ this[key]+'\n';
+                }
+            }
+            return output;
+        }
+        delete(student.plan_for_theFuture);
+        alert(student.toString());
+    </script>
+</body>
+</html>

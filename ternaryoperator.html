@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* 3항연산자
+        var input = prompt('숫자를 입력해주세요.', '');
+        var number = Number(input);
+
+        (number > 0) ? alert('자연수 입니다.') : alert('자연수가 아닙니다.');
+        **/
+        var date = new Date();
+        var hour = date.getHours();
+
+        (hour<11) && alert('아침먹을시간');
+        (hour>11&&hour<15) && alert('점심먹을시간');
+        (hour>15) && alert('저녁먹을시간');
+    </script>
+    
+</body>
+</html>

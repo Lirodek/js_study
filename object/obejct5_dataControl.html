@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var student = [];
+        student.push({ name : '배광민', kr:87, met:49, eng:100, si:100});
+        student.push({ name : '이영섭', kr:75, met:97, eng:94, si:78});
+        student.push({ name : '김성호', kr:65, met:78, eng:78, si:94});
+        student.push({ name : '이상학', kr:97, met:78, eng:87, si:97});
+        student.push({ name : '박수혁', kr:64, met:75, eng:86, si:84});
+        student.push({ name : '김우혁', kr:84, met:78, eng:84, si:86});
+        student.push({ name : '이형곤', kr:64, met:79, eng:88, si:87});
+        student.push({ name : '기성룡', kr:37, met:84, eng:86, si:81});
+        student.push({ name : '박장혁', kr:97, met:97, eng:89, si:64});
+        student.push({ name : '김강규', kr:88, met:48, eng:84, si:79});
+
+        for(var i in student){
+            student[i].getSum = function(){
+                return this.kr + this.met + this.eng + this.si;
+            }
+            student[i].getAverage = function(){
+                return this.getSum() / 4;
+            }
+        }
+        var output = '이름\t총점\t평균\n';
+        for(var i in student){
+            with(student[i]){
+                output += kr +'\t'+ getSum() +'\t'+ getAverage() +'\n';
+            }
+        }
+        alert(output);
+        
+    </script>
+</body>
+</html>

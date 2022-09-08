@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var student={
+            name:"배광민",
+            kr:92,
+            met:89,
+            eng:96,
+            pg:98,
+            output:'이미 있지롱',
+        };
+        student.game='starcraft';
+        student.toString = function(){
+            var output = '';
+            for(var key in this){
+                if(key != 'toString'){
+                    output+=key+'\t'+this[key]+'\n';
+                }
+            }
+            return output;
+        }
+        // var output="";
+        // with(student){
+        //     window.output +="이름:" + name +"\n";
+        //     window.output +="국어:" + kr +"\n";
+        //     window.output +="수학:" + met +"\n";
+        //     window.output +="영어:" + eng +"\n";
+        //     window.output +="game:" + game +"\n";
+        //     window.output +="코딩:" + pg +"\n";
+        // }
+        alert(student.toString());
+    </script>
+</body>
+</html>
